@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideology Generator</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
-    <h1>{{ message }}</h1>
+    <h1>Ideology generator</h1>
+    <py-script>
+        import random
+
+# list
+prefixos = ["Anarco", "Monarco", "Comuno", "Neo", "Eco", "Turbo", "Social", "Ultra", "Omni", "Minarco"]
+sufixos = ["fobia", "ista", "man", "zoo", "byte", "filia", "tropia", "arquia", "cracia", "ismo"]
+
+# func
+def gerar_nome():
+    prefixo = random.choice(prefixos)
+    sufixo = random.choice(sufixos)
+    return prefixo + sufixo
+
+# gen
+for _ in range(5):
+    print(gerar_nome())
+
+
+
+    </py-script>
 </body>
 </html>
